@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import AddTaskForm from '../../molecules/AddTaskForm';
 import { AddNewTask } from './AddTaskActions';
 
@@ -29,6 +30,7 @@ class AddTask extends Component {
     this.props.AddNewTask(details);
     //  this.props.ShowAddTaskForm(false);
     e.target.reset();
+    this.props.history.push('/task-list');
   };
 
   render() {
@@ -40,7 +42,9 @@ class AddTask extends Component {
   }
 }
 
-export default connect(
-  null,
-  { AddNewTask }
-)(AddTask);
+export default withRouter(
+  connect(
+    null,
+    { AddNewTask }
+  )(AddTask)
+);

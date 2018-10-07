@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -20,10 +20,10 @@ ReactDOM.render(
     )}
   >
     <BrowserRouter>
-      <div>
+      <Fragment>
         <Route exact path="/" component={TaskPage} />
         <Route exact path="/task-list" component={TaskListPage} />
-      </div>
+      </Fragment>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

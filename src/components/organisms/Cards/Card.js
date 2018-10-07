@@ -28,13 +28,13 @@ const Card = ({ title, description, status, id, changeStatus }) => {
           className="form-control"
           onChange={changeHandler}
         >
-          <option selected={notStarted} value="notStarted">
+          <option defaultValue={notStarted} value="notStarted">
             Not started
           </option>
-          <option selected={inProgress} value="inProgress">
+          <option defaultValue={inProgress} value="inProgress">
             In progress
           </option>
-          <option selected={completed} value="completed">
+          <option defaultValue={completed} value="completed">
             Completed
           </option>
         </select>

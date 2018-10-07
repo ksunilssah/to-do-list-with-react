@@ -34,18 +34,20 @@ class CardsHolder extends Component {
 
   render() {
     return (
-      <div className="row">
-        <div className="col-4">
-          <h4>Not Started</h4>
-          {this.getNotStartedList()}
-        </div>
-        <div className="col-4">
-          <h4>In progress</h4>
-          {this.getInProgressList()}
-        </div>
-        <div className="col-4">
-          <h4>Completed</h4>
-          {this.getCompletedList()}
+      <div className="container">
+        <div className="row">
+          <div className="col-4">
+            <h4>Not Started</h4>
+            {this.getNotStartedList()}
+          </div>
+          <div className="col-4">
+            <h4>In progress</h4>
+            {this.getInProgressList()}
+          </div>
+          <div className="col-4">
+            <h4>Completed</h4>
+            {this.getCompletedList()}
+          </div>
         </div>
       </div>
     );

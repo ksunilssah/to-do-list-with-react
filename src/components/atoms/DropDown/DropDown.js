@@ -1,11 +1,18 @@
 import React from 'react';
 
 const DropDown = props => {
-  const { optionArray, getInputValues, id, defaultText, selected } = props;
+  const {
+    optionArray,
+    name,
+    getInputValues,
+    id,
+    defaultText,
+    selected
+  } = props;
   return (
     <div className="form-group">
       <select
-        name={id}
+        name={name}
         id={id}
         className="form-control"
         onChange={event => getInputValues(event)}
